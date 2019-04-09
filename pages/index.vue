@@ -13,3 +13,11 @@
     </v-flex>
   </v-layout>
 </template>
+
+<script>
+import transition from '~/mixins/transition';
+
+export default {
+  mixins: [transition]
+}
+</script>

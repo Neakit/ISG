@@ -1,0 +1,48 @@
+/* slide animation */
+
+.sliding-enter-active {
+    animation: acrossIn 0.5s ease both;
+} 
+.sliding-leave-active {
+    animation: acrossOut 0.2s ease both;
+} 
+.sliding-reverse-enter-active {
+    animation: acrossReverseIn 0.5s ease both;
+}
+.sliding-reverse-leave-active {
+    animation: acrossReverseOut 0.2s ease both;
+}
+
+@keyframes acrossIn {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes acrossOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes acrossReverseIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes acrossReverseOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
