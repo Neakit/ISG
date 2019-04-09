@@ -2,60 +2,101 @@
   <v-app dark>
     <!-- left navigation drawer -->
     <v-navigation-drawer
-      v-model="drawer"
+      v-model="leftDrawer"
       fixed
       app
     >
       <v-list>
         <v-list-tile
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
+          avatar
+          v-for="(item, index) in menuItems"
+          :key="index"
+          @click="goToPage(item, index)"
         >
-          <v-list-tile-action>
+          <v-list-tile-avatar>
             <v-icon>{{ item.icon }}</v-icon>
-          </v-list-tile-action>
+          </v-list-tile-avatar>
+
           <v-list-tile-content>
-            <v-list-tile-title v-text="item.title" />
+            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
           </v-list-tile-content>
+
+          <v-list-tile-action @click.stop="openTransportDrawer" v-if="index === 1">
+            <v-btn icon>
+              <v-icon color="grey">keyboard_arrow_right</v-icon>
+            </v-btn>
+          </v-list-tile-action>
+            
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <!-- toolbar -->
-    <v-toolbar
-      fixed
-      app
-    >
-      <v-toolbar-side-icon @click="drawer = !drawer" />
-      <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>menu</v-icon>
-      </v-btn>
-    </v-toolbar>
+    
     <!-- content -->
     <v-content>
       <v-container>
+        <v-toolbar 
+          color="transparent" 
+          dense
+          flat
+        >
+          <v-toolbar-items class="hidden-sm-and-up">
+            <v-btn
+              icon
+              @click.stop="leftDrawer = !leftDrawer"
+            >
+              <v-icon>menu</v-icon>
+            </v-btn>
+          </v-toolbar-items>
+
+          <v-spacer class="hidden-sm-and-up"></v-spacer>
+          
+          <v-btn 
+            flat
+            to="/"
+            class="v-btn--menu v-btn--logo"
+          >
+            ISG
+          </v-btn>
+          
+          <v-spacer class="hidden-sm-and-down"></v-spacer>
+
+          <v-toolbar-items class="hidden-sm-and-down">
+            <v-btn 
+              class="v-btn--menu"
+              flat
+              v-for="(item, key) in menuItems"
+              :key="key"
+              :to="item.link"
+            >
+              {{ item.title }}
+            </v-btn>
+          </v-toolbar-items>
+        </v-toolbar>
         <nuxt />
       </v-container>
     </v-content>
-    <!-- right navigation drawer -->
+
     <v-navigation-drawer
       v-model="rightDrawer"
-      :right="right"
-      temporary
+      :right="true"
       fixed
+      app
     >
       <v-list>
-        <v-list-tile @click.native="right = !right">
-          <v-list-tile-action>
-            <v-icon light>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
+        <v-list-tile
+          avatar
+          v-for="(item, index) in transportItems"
+          :key="index"
+          @click.native="goToTransport"
+        >
+          <v-list-tile-avatar>
+            <v-icon color="grey">{{ item.icon }}</v-icon>
+          </v-list-tile-avatar>
+
+          <v-list-tile-content>
+            <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+          </v-list-tile-content>
+
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
@@ -63,20 +104,63 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
+  computed: {
+    ...mapState('menu', [
+      'menuItems', 
+      'transportItems'
+    ])
+  },
+  methods: {
+    goToPage(item){
+      this.leftDrawer = false;
+      this.$router.push({
+        path: `${item.link}`
+      })
+    },
+    openTransportDrawer(){
+      this.leftDrawer = false;
+      this.rightDrawer = true;
+    },
+    goToTransport(){
+      this.rightDrawer = false;
+      this.$router.push({
+        path: '/transport'
+      })
+    }
+  },
   data() {
     return {
-      drawer: false,
-      items: [
-        {
-          icon: 'apps',
-          title: 'Welcome',
-          to: '/'
-        }
-      ],
-      right: true,
+      leftDrawer: false,
       rightDrawer: false,
-    }
+    }   
   }
 }
 </script>
+
+<style scoped>
+  .v-btn--logo{
+    min-width: 0px;
+    padding: 0px 8px;
+  }
+  .v-btn--menu {
+    border-radius: 0px;
+    -moz-transition: none;
+    -webkit-transition: none;
+    -o-transition: box-shadow 0 ease-in;
+    transition: none;
+  }
+  .v-btn--menu.v-btn--active {
+    -webkit-box-shadow: 0px 3px 0px 0px #E10A0C;
+    -moz-box-shadow: 0px 3px 0px 0px #E10A0C;
+    box-shadow: 0px 3px 0px 0px #E10A0C;
+  }
+  .v-btn--logo.v-btn--active {
+    border-bottom: none;
+  }
+  .v-btn--menu.v-btn--active:before {
+    background-color: transparent ;
+  }
+</style>
