@@ -9,6 +9,7 @@
       sm8
       md6
     >
+    <h3>Home page</h3>
     </v-flex>
   </v-layout>
 </template>
