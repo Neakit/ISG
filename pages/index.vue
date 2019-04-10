@@ -1,40 +1,80 @@
 <template>
-  <div class="main pt-5">
-    <v-container>
-        <p class="display-1 font-weight-medium pb-4 pt-5">
-            Международные перевозки по любым направлениям
-        </p>
-        <no-ssr>
-            <swiper :options="swiperOption" >
-                <swiper-slide 
-                    v-for="(card, i) in cards" 
-                    :key="i" 
-                    style="width: 250px; cursor: pointer"
-                >
-                    <img 
-                        :src="card.imgPath" 
-                        alt="Card image" 
-                        style="width: 100%" 
-                        :data-car-id="`#${card.id}`"
-                    />
-                    <p class="title font-weight-light py-2 text-xs-center">{{ card.title }}</p>
-                </swiper-slide> 
-            </swiper>
-        </no-ssr>
-        <v-layout justify-space-around>
-            <span class="group">
-                <v-icon class="mt-1">keyboard_arrow_left</v-icon>
-                <v-icon class="mb-1">pan_tool</v-icon>
-                <v-icon class="ml-1">keyboard_arrow_right</v-icon>
-            </span>
-        </v-layout>
-        <v-layout class="py-4" row justify-center>
-            <v-btn style="backgroundColor: #E10A0C">
-                Оформить звонок
-            </v-btn>
-        </v-layout>
-    </v-container>
-  </div>
+    <div>
+        <div class="main pt-5">
+            <v-container>
+                <p class="display-1 font-weight-medium pb-4 pt-5">
+                    Международные перевозки по любым направлениям
+                </p>
+                <no-ssr>
+                    <swiper :options="swiperOption" >
+                        <swiper-slide 
+                            v-for="(card, i) in cards" 
+                            :key="i" 
+                            style="width: 250px; cursor: pointer"
+                        >
+                            <img 
+                                :src="card.imgPath" 
+                                alt="Card image" 
+                                style="width: 100%" 
+                                :data-car-id="`#${card.id}`"
+                            />
+                            <p class="title font-weight-light py-2 text-xs-center">{{ card.title }}</p>
+                        </swiper-slide> 
+                    </swiper>
+                </no-ssr>
+                <v-layout justify-space-around>
+                    <span class="group">
+                        <v-icon class="mt-1">keyboard_arrow_left</v-icon>
+                        <v-icon class="mb-1">pan_tool</v-icon>
+                        <v-icon class="ml-1">keyboard_arrow_right</v-icon>
+                    </span>
+                </v-layout>
+                <v-layout class="py-4" row justify-center>
+                    <v-btn style="backgroundColor: #E10A0C">
+                        Оформить звонок
+                    </v-btn>
+                </v-layout>
+            </v-container>
+        </div>
+        <!--about section-->
+        <div class="about">
+            <v-container>
+                <p class="h2 text-xs-center pt-4 pb-2 title">О компании</p>
+                <p class="h6 text-left py-2">
+                    Компания Inter Smart Group предоставляет автомобильные транспортные 
+                    услуги на международном уровне. Наше неоспоримое преимущество это – логистика Smart, 
+                    которая дает нашим клиентам полный контроль и уверенность в безопасности 
+                    всех происходящих операций, гарантирует оперативность в документообороте и других 
+                    бизнес-процессов нашей компании, а также предоставляет широкий перечень сервисов, 
+                    которые смогут пригодиться на нелегкой стезе бизнеса. 
+                </p>
+                <p class="h6 text-left py-2">
+                    Обращаясь к нам, Вы можете быть уверенными в сохранности доставляемого груза, 
+                    поскольку мы ценим каждого клиента и нам важно ваше доверие. Отличительная 
+                    особенность нашей компании в том, что мы занимаемся не просто перевозками - мы 
+                    способны покрыть большой спектр задач. Мы готовы взять на себя превалирующую 
+                    часть ваших рутин для достижения вами максимальных показателей прибыли, сокращения 
+                    ненужных временных издержек, и уменьшения ваших расходов на персонал. 
+                </p>
+                <p class="h6 text-left py-2">
+                    Если Вы ищете надежного партнера для перевозки груза, Вы - на верном пути, потому 
+                    что нашим главным заданием является цель стать лучшими на рынке логистики.  
+                </p>
+                <p class="h6 text-left py-2">
+                    С момента основания мы не стоим на месте и постоянно покоряем новые профессиональные 
+                    вершины, постоянно расширяем базу партнеров и заслуживаем доверие ведущих компаний 
+                    Украины и зарубежья. С тех пор мы стали гораздо более опытными, наладили дружеские 
+                    и теплые отношения с нашими партнерами и перевезли уже более ста тысяч тонн грузов. 
+                    Каждый день мы стремимся сделать наш сервис чуточку лучше.   
+                </p>
+                <p class="h6 text-left py-2">
+                    За время своей практической деятельности мы убедились в том, что мы в состоянии 
+                    осуществить перевозки любой степени сложности на высшем уровне, и самое главное – наши 
+                    заказчики успели в этом убедиться. Inter Smart Group – это Smart перевозки нового поколения.    
+                </p>
+            </v-container>
+        </div>
+    </div>
 </template>
 
 <script>
