@@ -33,47 +33,47 @@
     
     <!-- content -->
     <v-content>
-      <v-container>
-        <v-toolbar 
-          color="transparent" 
-          dense
-          flat
-        >
-          <v-toolbar-items class="hidden-sm-and-up">
-            <v-btn
-              icon
-              @click.stop="leftDrawer = !leftDrawer"
-            >
-              <v-icon>menu</v-icon>
-            </v-btn>
-          </v-toolbar-items>
 
-          <v-spacer class="hidden-sm-and-up"></v-spacer>
-          
-          <v-btn 
-            flat
-            to="/"
-            class="v-btn--menu v-btn--logo"
+      <v-toolbar 
+        color="transparent" 
+        dense
+        flat
+        absolute
+      >
+        <v-toolbar-items class="hidden-sm-and-up">
+          <v-btn
+            icon
+            @click.stop="leftDrawer = !leftDrawer"
           >
-            ISG
+            <v-icon>menu</v-icon>
           </v-btn>
-          
-          <v-spacer class="hidden-sm-and-down"></v-spacer>
+        </v-toolbar-items>
 
-          <v-toolbar-items class="hidden-sm-and-down">
-            <v-btn 
-              class="v-btn--menu"
-              flat
-              v-for="(item, key) in menuItems"
-              :key="key"
-              :to="item.link"
-            >
-              {{ item.title }}
-            </v-btn>
-          </v-toolbar-items>
-        </v-toolbar>
-        <nuxt />
-      </v-container>
+        <v-spacer class="hidden-sm-and-up"></v-spacer>
+        
+        <v-btn 
+          flat
+          to="/"
+          class="v-btn--menu v-btn--logo"
+        >
+          ISG
+        </v-btn>
+        
+        <v-spacer class="hidden-sm-and-down"></v-spacer>
+
+        <v-toolbar-items class="hidden-sm-and-down">
+          <v-btn 
+            class="v-btn--menu"
+            flat
+            v-for="(item, key) in menuItems"
+            :key="key"
+            :to="item.link"
+          >
+            {{ item.title }}
+          </v-btn>
+        </v-toolbar-items>
+      </v-toolbar>
+      <nuxt />
     </v-content>
 
     <v-navigation-drawer
