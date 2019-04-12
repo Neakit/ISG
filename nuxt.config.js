@@ -35,6 +35,7 @@ export default {
   css: [
     '~/assets/style/app.styl',
     '~/assets/main.css',
+    'leaflet/dist/leaflet.css', 
   ],
 
   /*
@@ -42,7 +43,9 @@ export default {
   */
   plugins: [
     '@/plugins/vuetify',
-    { src: '~/plugins/swiper.js', ssr: false }
+    { src: '~/plugins/swiper.js', ssr: false },
+    { src: '~/plugins/leaflet.js', ssr: false},
+
   ],
 
   /*

@@ -150,6 +150,32 @@
                 </v-layout>
             </v-container>
         </div>
+        <!--map section-->
+        <no-ssr>
+            <div @wheel="zoom">
+                <l-map  
+                    class="mini-map" 
+                    :zoom=6 
+                    :center="position" 
+                    :options="options" 
+                    refs="map"
+                    style="height: 35vh;"
+                >
+                    <v-alert 
+                        :value="isScrollable"
+                        type="info"
+                        class="map-alert text-center"
+                    >
+                        Нажмите CTRL, чтобы имзенить масштаб карты
+                    </v-alert>
+                    
+                    <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
+                    <l-marker :lat-lng="position" :draggable="draggable">
+                        <l-popup :content="popupContent"></l-popup>
+                    </l-marker>
+                </l-map>
+            </div>
+        </no-ssr>
     </div>
 </template>
 
@@ -165,7 +191,36 @@ export default {
         this.$router.push({
             path: '/transport'
         })
-    }
+    },
+    zoom (event) {
+        event.stopPropagation();
+        // up
+        if (event.ctrlKey === true && event.deltaY < 0) {
+            event.preventDefault();
+            const zoomInBtn = document.getElementsByClassName('leaflet-control-zoom-in')[0];
+            zoomInBtn.click();
+        } else if (event.ctrlKey === true && event.deltaY > 0) {
+            event.preventDefault();
+            const zoomOutBtn = document.getElementsByClassName('leaflet-control-zoom-out')[0];
+            zoomOutBtn.click();
+        } else {
+            this.isScrollable = true;
+            setTimeout(()=>{
+                this.isScrollable = false;
+            }, 1000);
+        }
+    },
+},
+  data() {
+      return {
+            position: [50.42032799, 30.52887082],
+            draggable: true,
+            popupContent: "Украина, г. Киев, ул. Луговая 12",
+            isScrollable: false,
+            options: {
+                scrollWheelZoom: false
+            }
+      }
   },
   computed: {
       ...mapState('transport', ['cards']),
@@ -238,5 +293,13 @@ export default {
     align-items: center;
     text-decoration: none;
     color: #fff;
+}
+.map-alert {
+    position: relative;
+    z-index: 999;
+    width: 50%;
+    top: 5%;
+    left: 0;
+    border-radius: 2px;
 }
 </style>
