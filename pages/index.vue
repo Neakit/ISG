@@ -74,6 +74,82 @@
                 </p>
             </v-container>
         </div>
+        <!--contacts section-->
+        <div class="contacts">
+            <v-container class="py-3">
+                <p class="text-xs-center title">Контактная информация</p>
+                <v-layout class="py-3">
+                    <v-flex sm4>
+                        <div class="py-2 social-link">
+                            <img src="/icons/map.svg" class="social-icons" alt="icon">
+                            <span>Украина, г. Киев, ул. Луговая</span>
+                        </div>
+                        <div class="py-2">
+                            <a 
+                                href="mailto:pavliukny@gmail.com" 
+                                class="social-link"
+                            >
+                                <img src="/icons/email.svg" class="social-icons" alt="icon">
+                                <span>intersmartgroup@ukr.net</span>
+                            </a>
+                        </div>    
+                    </v-flex>
+                    <v-flex sm4>
+                        <div class="py-2">
+                            <a 
+                                href="tel:+380934581710" 
+                                class="social-link"
+                            >
+                                <img src="/icons/phone.svg" class="social-icons" alt="icon">
+                                <span>+38 (093) 458-17-10</span>
+                            </a>
+                        </div>
+                        <div class="py-2">
+                            <a
+                                class="social-link" 
+                                href="tel:+380967998446" 
+                            >
+                                <img src="/icons/phone.svg" class="social-icons" alt="icon">
+                                <span>+38(096)-799-84-46</span>
+                            </a>
+                        </div>
+                    </v-flex>
+                    <v-flex class="text-left" sm4>
+                        <div class="py-2">
+                            <a 
+                                href="https://t.me/joinchat/FnocjBUIuyayt5cW9el-dg" 
+                                class="social-link"
+                            >
+                                <img 
+                                    src="/icons/telegram.svg" 
+                                    class="social-icons"
+                                    alt="social"
+                                >
+                                <span>Найдите нас в Telegram</span>
+                            </a>
+                        </div>
+                        <div class="py-2">
+                            <a 
+                                href="https://invite.viber.com/?g2=AQAMOCr8%2BoEL%2F0lgvGiqYaVTptq9e8NL%2BZE4eh%2B9u4KZF5S6t3qUOfSu9cU8se92"
+                                class="social-link"
+                            >
+                                <img 
+                                    src="/icons/viber.svg" 
+                                    class="social-icons"
+                                    alt="social"
+                                >
+                                <span>Найдите нас в Viber</span>
+                            </a>
+                        </div>
+                    </v-flex>
+                </v-layout>
+                <v-layout class="py-4" row justify-center>
+                    <v-btn style="backgroundColor: #E10A0C">
+                        Оформить звонок
+                    </v-btn>
+                </v-layout>
+            </v-container>
+        </div>
     </div>
 </template>
 
@@ -135,5 +211,32 @@ export default {
         rgba(0, 0, 0, 0.4)
         ), url("/home/background.png");
     background-size: cover;
+}
+.social-icons {
+    height: 2rem;
+    cursor: pointer;
+    padding-right: 3px;
+}
+.contacts {
+    background:  linear-gradient(
+        rgba(0, 0, 0, 0.4), 
+        rgba(0, 0, 0, 0.4)
+        ), url("/home/about.jpg");
+    background-size: cover;
+    color: white
+}
+.social-link {
+    display: flex;
+    display: -webkit-box; 
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex; 
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
 }
 </style>
