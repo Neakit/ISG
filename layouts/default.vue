@@ -85,13 +85,13 @@
       <v-list>
         <v-list-tile
           avatar
-          v-for="(item, index) in transportItems"
+          v-for="(item, index) in cards"
           :key="index"
-          @click.native="goToTransport"
+          @click.native="goToTransport(item.id)"
         >
-          <v-list-tile-avatar>
-            <v-icon color="grey">{{ item.icon }}</v-icon>
-          </v-list-tile-avatar>
+          <!-- <v-list-tile-avatar>
+            <v-icon color="grey">compare_arrows</v-icon>
+          </v-list-tile-avatar> -->
 
           <v-list-tile-content>
             <v-list-tile-title>{{ item.title }}</v-list-tile-title>
@@ -111,11 +111,15 @@ export default {
     ...mapState('menu', [
       'menuItems', 
       'transportItems'
+    ]),
+    ...mapState('transport', [
+      'cards', 
     ])
   },
   methods: {
     goToPage(item){
       this.leftDrawer = false;
+      this.$store.commit('setCurrentTab', 'taps')
       this.$router.push({
         path: `${item.link}`
       })
@@ -124,8 +128,9 @@ export default {
       this.leftDrawer = false;
       this.rightDrawer = true;
     },
-    goToTransport(){
+    goToTransport(id){
       this.rightDrawer = false;
+      this.$store.commit('setCurrentTab', id)
       this.$router.push({
         path: '/transport'
       })

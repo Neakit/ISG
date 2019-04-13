@@ -45,7 +45,7 @@ export default {
     '@/plugins/vuetify',
     { src: '~/plugins/swiper.js', ssr: false },
     { src: '~/plugins/leaflet.js', ssr: false},
-
+    { src: '~/plugins/vue-scrollto.js', ssr: false}
   ],
 
   /*

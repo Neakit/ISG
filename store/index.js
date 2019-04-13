@@ -7,3 +7,8 @@ export const mutations = {
     state.selectedTab = id
   }
 }
+export const getters = {
+  currentTab (state) {
+    return state.selectedTab;
+  }
+}

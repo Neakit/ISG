@@ -16,7 +16,7 @@
                                 :src="card.imgPath" 
                                 alt="Card image" 
                                 style="width: 100%" 
-                                :data-car-id="`#${card.id}`"
+                                :data-car-id="`${card.id}`"
                             />
                             <p class="title font-weight-light py-2 text-xs-center">{{ card.title }}</p>
                         </swiper-slide> 
@@ -78,8 +78,8 @@
         <div class="contacts">
             <v-container class="py-3">
                 <p class="text-xs-center title">Контактная информация</p>
-                <v-layout class="py-3">
-                    <v-flex sm4>
+                <v-layout class="py-3" wrap>
+                    <v-flex xs12 sm4>
                         <div class="py-2 social-link">
                             <img src="/icons/map.svg" class="social-icons" alt="icon">
                             <span>Украина, г. Киев, ул. Луговая</span>
@@ -94,7 +94,7 @@
                             </a>
                         </div>    
                     </v-flex>
-                    <v-flex sm4>
+                    <v-flex sm4 xs12>
                         <div class="py-2">
                             <a 
                                 href="tel:+380934581710" 
@@ -114,7 +114,7 @@
                             </a>
                         </div>
                     </v-flex>
-                    <v-flex class="text-left" sm4>
+                    <v-flex class="text-left" sm4 xs12>
                         <div class="py-2">
                             <a 
                                 href="https://t.me/joinchat/FnocjBUIuyayt5cW9el-dg" 
@@ -266,6 +266,9 @@ export default {
         rgba(0, 0, 0, 0.4)
         ), url("/home/background.png");
     background-size: cover;
+}
+.about {
+    background: transparent;
 }
 .social-icons {
     height: 2rem;
