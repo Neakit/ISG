@@ -305,4 +305,11 @@ export default {
     left: 0;
     border-radius: 2px;
 }
+.swiper-container{
+    mask-image: linear-gradient(to right, 
+    rgba(0,0,0,0.01) 0%, 
+    rgba(0,0,0,1) 3%, 
+    rgba(0,0,0,1) 97%, 
+    rgba(0,0,0,0.01) 100%);
+}
 </style>
