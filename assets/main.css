@@ -46,3 +46,15 @@
         transform: translateX(100%);
     }
 }
+main {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4), 
+        rgba(0, 0, 0, 0.4)
+        ), url("/pages_background.jpg");
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    /* background-position: 0% 0% !important; */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover !important; */
+    min-height: 100vh;
+  }
