@@ -57,4 +57,10 @@ main {
     /* background-repeat: no-repeat; */
     /* background-size: cover !important; */
     min-height: 100vh;
-  }
+}
+@font-face {
+    font-family: 'WorldFair';
+    src: url('./fonts/WorldFair/WorldFair.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

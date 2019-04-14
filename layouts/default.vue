@@ -51,13 +51,7 @@
 
         <v-spacer class="hidden-sm-and-up"></v-spacer>
         
-        <v-btn 
-          flat
-          to="/"
-          class="v-btn--menu v-btn--logo"
-        >
-          ISG
-        </v-btn>
+        <Logo />
         
         <v-spacer class="hidden-sm-and-down"></v-spacer>
 
@@ -107,10 +101,12 @@
 <script>
 import { mapState } from 'vuex';
 import Modal from '@/components/Modal.vue'
+import Logo from '@/components/Logo.vue'
 
 export default {
   components: {
-    Modal
+    Modal,
+    Logo
   },
   computed: {
     ...mapState('menu', [
@@ -172,5 +168,15 @@ export default {
   }
   .v-btn--menu.v-btn--active:before {
     background-color: transparent ;
+  }
+  .v-toolbar {
+    padding-right: 64px !important;
+    padding-left: 64px !important;
+  }
+  @media screen and (max-width: 322px) {
+    .v-toolbar {
+      padding-right: 0px !important;
+      padding-left: 0px !important;
+    }
   }
 </style>

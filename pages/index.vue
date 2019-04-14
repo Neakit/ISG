@@ -85,7 +85,7 @@
                     <v-flex xs12 sm4>
                         <div class="py-2 social-link">
                             <img src="/icons/map.svg" class="social-icons" alt="icon">
-                            <span>Украина, г. Киев, ул. Луговая</span>
+                            <span>г. Киев, ул. И.Павла II 4/6, корпус А</span>
                         </div>
                         <div class="py-2">
                             <a 
@@ -219,7 +219,7 @@ export default {
       return {
             position: [50.42032799, 30.52887082],
             draggable: true,
-            popupContent: "Украина, г. Киев, ул. Луговая 12",
+            popupContent: "г. Киев, ул. И.Павла II 4/6, корпус А",
             isScrollable: false,
             options: {
                 scrollWheelZoom: false
