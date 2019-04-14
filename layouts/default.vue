@@ -173,7 +173,7 @@ export default {
     padding-right: 64px !important;
     padding-left: 64px !important;
   }
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 425px) {
     .v-toolbar {
       padding-right: 0px !important;
       padding-left: 0px !important;
