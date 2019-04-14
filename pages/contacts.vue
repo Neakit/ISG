@@ -70,7 +70,7 @@
                     </v-flex>
                 </v-layout>
                 <v-layout class="py-4" row justify-center>
-                    <v-btn style="backgroundColor: #E10A0C">
+                    <v-btn style="backgroundColor: #E10A0C" @click="openModal">
                         Оформить звонок
                     </v-btn>
                 </v-layout>
@@ -105,7 +105,8 @@
 </template>
 
 <script>
-import transition from '~/mixins/transition'
+import transition from '~/mixins/transition';
+import { mapMutations } from 'vuex';
 
 export default {
     mixins: [transition],
@@ -121,6 +122,7 @@ export default {
         }
     },
     methods: {
+        ...mapMutations(['openModal']),
         zoom (event) {
             event.stopPropagation();
             // up

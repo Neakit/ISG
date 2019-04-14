@@ -147,7 +147,7 @@
                     </v-flex>
                 </v-layout>
                 <v-layout class="py-4" row justify-center>
-                    <v-btn style="backgroundColor: #E10A0C">
+                    <v-btn style="backgroundColor: #E10A0C" @click="openModal">
                         Оформить звонок
                     </v-btn>
                 </v-layout>
