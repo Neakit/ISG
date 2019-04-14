@@ -74,6 +74,7 @@
         </v-toolbar-items>
       </v-toolbar>
       <nuxt />
+      <Modal/>
     </v-content>
 
     <v-navigation-drawer
@@ -105,8 +106,12 @@
 
 <script>
 import { mapState } from 'vuex';
+import Modal from '@/components/Modal.vue'
 
 export default {
+  components: {
+    Modal
+  },
   computed: {
     ...mapState('menu', [
       'menuItems', 

@@ -56,7 +56,7 @@
                       <v-btn
                         style="backgroundColor: #E10A0C"
                         class="py-1" 
-                        @click="goToMain()" 
+                        @click="openModal" 
                       >
                         Заказать
                       </v-btn>
@@ -71,7 +71,7 @@
 
 <script>
 import transition from '~/mixins/transition';
-import { mapState, mapGetters } from 'vuex';
+import { mapState, mapGetters, mapMutations } from 'vuex';
 
 export default {
     beforeRouteEnter (to, from, next) {
@@ -91,6 +91,7 @@ export default {
       ...mapGetters(['currentTab'])
     },
     methods: {
+      ...mapMutations(['openModal']),
         scrollTo(element){
             this.$scrollTo(`#${element}`, 1000, {
                 container: '.slider-container',
