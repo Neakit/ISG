@@ -35,6 +35,7 @@
               <v-text-field
                 type="number"
                 v-model.number="form.number"
+                @keyup="setNumber($event)"
                 label="Номер Вашего телефона:"
                 placeholder="Чтобы мы с Вами связались"
                 :rules="numberRules"
@@ -44,6 +45,7 @@
             </v-flex>
             <v-flex xs12>
                 <v-textarea
+                color="#E10A0C"
                 v-model="form.request"
                 label="Ваш запрос:"
                 placeholder="В свободной форме"
@@ -100,6 +102,12 @@ import { mapState, mapMutations } from 'vuex';
     },
     methods: {
       ...mapMutations(['closeModal']),
+      setNumber(e){
+        if(e.keyCode == 190 || e.keyCode == 188) {
+          let fixed = this.form.number.replace(e.key, '')
+          this.form.number = fixed 
+        }
+      },
       resetMessage() {
         this.form = {
           number: '',
