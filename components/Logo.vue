@@ -38,7 +38,7 @@ export default {
     cursor: pointer;
   }
   .logo-title {
-    font-size: 3.2rem;
+    font-size: 3.4rem;
     padding-bottom: 0 !important;
     margin-bottom: 0 !important
   }

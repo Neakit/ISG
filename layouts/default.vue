@@ -36,7 +36,6 @@
 
       <v-toolbar 
         color="transparent" 
-        dense
         flat
         absolute
       >
