@@ -179,6 +179,12 @@
                 </l-map>
             </div>
         </no-ssr>
+        <v-footer>
+            <v-spacer></v-spacer>
+            <span class="mr-2">
+              Все права защищены &copy; {{ new Date().getFullYear() }}
+            </span>
+        </v-footer>
     </div>
 </template>
 
