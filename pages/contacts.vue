@@ -185,4 +185,7 @@ export default {
       left: 0;
       border-radius: 2px;
   }
+  .vue2leaflet-map {
+      z-index: 100
+  }
 </style>
