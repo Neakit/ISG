@@ -174,7 +174,7 @@ export default {
     rgba(0,0,0,1) 5%, 
     rgba(0,0,0,1) 97%, 
     rgba(0,0,0,0.01) 100%);
-    height: 500px;
+    height: 90vh;
 }
 .slider-container::-webkit-scrollbar { 
     display: none; 
