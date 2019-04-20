@@ -113,7 +113,7 @@
                                 href="tel:+380967998446" 
                             >
                                 <img src="/icons/phone.svg" class="social-icons" alt="icon">
-                                <span>+38(096)-799-84-46</span>
+                                <span>+38 (096) 799-84-46</span>
                             </a>
                         </div>
                     </v-flex>
@@ -279,6 +279,7 @@ export default {
 }
 .about {
     background: transparent;
+    font-family: 'Montserrat', sans-serif;
 }
 .social-icons {
     height: 2rem;
@@ -291,7 +292,8 @@ export default {
         rgba(0, 0, 0, 0.4)
         ), url("/home/about.jpg");
     background-size: cover;
-    color: white
+    color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 .social-link {
     display: flex;
@@ -322,4 +324,5 @@ export default {
     rgba(0,0,0,1) 97%, 
     rgba(0,0,0,0.01) 100%);
 }
+
 </style>

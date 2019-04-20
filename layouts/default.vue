@@ -151,6 +151,7 @@ export default {
     padding: 0px 8px;
   }
   .v-btn--menu {
+    font-family: 'Montserrat', sans-serif;
     border-radius: 0px;
     -moz-transition: none;
     -webkit-transition: none;

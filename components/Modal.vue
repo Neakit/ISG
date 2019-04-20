@@ -33,9 +33,9 @@
             </v-flex>
             <v-flex xs12>
               <v-text-field
-                type="number"
-                v-model.number="form.number"
-                @keyup="setNumber($event)"
+                mask="phone"
+                color="#E10A0C"
+                v-model="form.number"
                 label="Номер Вашего телефона:"
                 placeholder="Чтобы мы с Вами связались"
                 :rules="numberRules"
@@ -87,7 +87,7 @@ import { mapState, mapMutations } from 'vuex';
       return {
         success: false,
         form: {
-          number: '',
+          number: "",
           request: ''
         },
         failed: false,
@@ -98,16 +98,10 @@ import { mapState, mapMutations } from 'vuex';
       }
     },
     computed: {
-      ...mapState(['modalDialog'])
+      ...mapState(['modalDialog']),
     },
     methods: {
       ...mapMutations(['closeModal']),
-      setNumber(e){
-        if(e.keyCode == 190 || e.keyCode == 188) {
-          let fixed = this.form.number.replace(e.key, '')
-          this.form.number = fixed 
-        }
-      },
       resetMessage() {
         this.form = {
           number: '',
@@ -125,13 +119,15 @@ import { mapState, mapMutations } from 'vuex';
             this.$nuxt.$loading.start()
             try {
                 const { ok } = await this.$axios.$post(url, postData)
+                debugger
                 if(ok) {
                 this.isDisabled = true;
                 this.toggleSuccessMsg(true)
                 setTimeout(()=> {
                     this.closeModal()
                     this.toggleSuccessMsg(false)
-                }, 4000)
+                    this.isDisabled = false;
+                }, 3000)
             }
             } catch (e) {
                 this.isDisabled = true;
