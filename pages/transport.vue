@@ -180,11 +180,11 @@ export default {
     display: none; 
 }
 .transport-inner {
-  padding-top: 7rem;
+  padding-top: 6rem;
 }
 @media screen and (max-width: 322px) {
     .transport-inner {
-      padding-top: 3.7rem
+      padding-top: 3.6rem
     }
 }
 </style>
