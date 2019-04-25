@@ -184,7 +184,7 @@ export default {
 }
 @media screen and (max-width: 322px) {
     .transport-inner {
-      padding-top: 4rem
+      padding-top: 3.7rem
     }
 }
 </style>

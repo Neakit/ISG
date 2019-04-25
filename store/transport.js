@@ -6,18 +6,18 @@ export const state = () => ({
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 
             id: 'taps'
         },
-        { 
-            imgPath: '/transport/moving.jpg', 
-            title: 'Переезд', 
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 
-            id: 'moving'
-        },
-        { 
-            imgPath: '/transport/dry.jpg', 
-            title: 'Сыпучие грузы', 
-            text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 
-            id: 'dry_cargo' 
-        },
+        // { 
+        //     imgPath: '/transport/moving.jpg', 
+        //     title: 'Переезд', 
+        //     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 
+        //     id: 'moving'
+        // },
+        // { 
+        //     imgPath: '/transport/dry.jpg', 
+        //     title: 'Сыпучие грузы', 
+        //     text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.', 
+        //     id: 'dry_cargo' 
+        // },
         { 
             imgPath: '/transport/fridge.jpg',
             title: 'Рефрижератор', 
@@ -74,7 +74,7 @@ export const state = () => ({
         },
         { 
             imgPath: '/transport/bus.jpeg', 
-            title: 'Микроавтобусы',
+            title: 'Микроавтобус',
             text: 'Грузовые микроавтобусы (в народе их называют «бусами» или, ласково, «бусиками») используются для транспортировки самых разнообразных грузов. Такие микроавтобусы – идеальный вариант для перевозки грузов небольшого объема как внутри города, так и при междугородных сообщениях.', 
             id: 'bus' 
         },

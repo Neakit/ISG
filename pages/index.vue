@@ -85,11 +85,11 @@
                     <v-flex xs12 sm4>
                         <div class="py-2 social-link">
                             <img src="/icons/map.svg" class="social-icons" alt="icon">
-                            <span>г. Киев, ул. И.Павла II 4/6, корпус А</span>
+                            <span>физический адрес г. Киев, ул. И.Павла II 4/6</span>
                         </div>
                         <div class="py-2">
                             <a 
-                                href="mailto:pavliukny@gmail.com" 
+                                href="mailto:serpentrans@gmail.com" 
                                 class="social-link"
                             >
                                 <img src="/icons/email.svg" class="social-icons" alt="icon">
@@ -104,7 +104,7 @@
                                 class="social-link"
                             >
                                 <img src="/icons/phone.svg" class="social-icons" alt="icon">
-                                <span>+38 (093) 458-17-10</span>
+                                <span>+380 (98) 210 64 17</span>
                             </a>
                         </div>
                         <div class="py-2">
@@ -113,14 +113,14 @@
                                 href="tel:+380967998446" 
                             >
                                 <img src="/icons/phone.svg" class="social-icons" alt="icon">
-                                <span>+38 (096) 799-84-46</span>
+                                <span>+380 (63) 374 35 39</span>
                             </a>
                         </div>
                     </v-flex>
                     <v-flex class="text-left" sm4 xs12>
                         <div class="py-2">
                             <a 
-                                href="https://t.me/joinchat/FnocjBUIuyayt5cW9el-dg" 
+                                href="https://t.me/joinchat/Awx0TxdHoeflm0JJDLABLA" 
                                 class="social-link"
                             >
                                 <img 
@@ -132,8 +132,9 @@
                             </a>
                         </div>
                         <div class="py-2">
+                                <!-- href="https://invite.viber.com/?g2=AQAMOCr8%2BoEL%2F0lgvGiqYaVTptq9e8NL%2BZE4eh%2B9u4KZF5S6t3qUOfSu9cU8se92" -->
                             <a 
-                                href="https://invite.viber.com/?g2=AQAMOCr8%2BoEL%2F0lgvGiqYaVTptq9e8NL%2BZE4eh%2B9u4KZF5S6t3qUOfSu9cU8se92"
+                                href="https://invite.viber.com/?g2=AQA1PiDOml7q7UmU8DgbuAF7gGIBol%2F6jYpjby64JzeD9ORKS0Iey14Vok0ND0ag&lang=en"
                                 class="social-link"
                             >
                                 <img 
