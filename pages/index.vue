@@ -120,7 +120,7 @@
                     <v-flex class="text-left" sm4 xs12>
                         <div class="py-2">
                             <a 
-                                href="https://t.me/joinchat/Awx0TxdHoeflm0JJDLABLA" 
+                                href="https://t.me/joinchat/Awx0TxdHoefIm0JJDLABLA" 
                                 class="social-link"
                             >
                                 <img 
