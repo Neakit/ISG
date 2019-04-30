@@ -1,6 +1,6 @@
 <template>
   <div class="transport-wrap">
-      <v-container class="transport-inner">
+      <v-container class="transport-inner" fill-height>
           <v-layout>
               <v-flex xs12 md4 class="hidden-sm-and-down">
                 <v-list 
@@ -154,7 +154,7 @@ export default {
       rgba(0, 0, 0, 0.4)
       ), url("/home/background.png");
   background-size: cover;
-  min-height: 100vh;
+  height: 100vh;
 }
 .transport-list{
   background: transparent;
@@ -174,13 +174,13 @@ export default {
     rgba(0,0,0,1) 5%, 
     rgba(0,0,0,1) 97%, 
     rgba(0,0,0,0.01) 100%);
-    height: 90vh;
+    height: 85vh;
 }
 .slider-container::-webkit-scrollbar { 
     display: none; 
 }
 .transport-inner {
-  padding-top: 6rem;
+  padding-top: 4.5rem;
 }
 @media screen and (max-width: 322px) {
     .transport-inner {
